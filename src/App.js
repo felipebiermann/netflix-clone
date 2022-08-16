@@ -1,11 +1,14 @@
-import "./App.css";
+import React, { useEffect } from "react";
+import Tmdb from "./Tmdb";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
-}
+export default () => {
+  useEffect(() => {
+    const loadAll = async () => {
+      let list = await Tmdb.getHomeList();
+      console.log(list);
+    };
+    loadAll();
+  }, []);
 
-export default App;
+  return <div>Olá Mundo</div>;
+};
