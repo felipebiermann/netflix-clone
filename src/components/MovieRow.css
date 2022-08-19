@@ -29,3 +29,23 @@
 .movieRow--item img:hover {
   transform: scale(1);
 }
+
+.movieRow--left,
+.movieRow--right {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.movieRow--left {
+  left: 0;
+}
+
+.movieRow--right {
+  right: 0;
+}
